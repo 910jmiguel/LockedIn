@@ -1,20 +1,25 @@
-import { useState } from "react";
-
 type TimerProps = {
+  mode: TimerState;
   minutes: number;
   seconds: number;
 };
 
-const Timer = ({ minutes, seconds }: TimerProps) => {
+const Timer = ({ mode, minutes, seconds }: TimerProps) => {
 
-  //const [time, setTime] = useState(durations);
-  const formatTime = `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`
+  const modeNames: Record<TimerProps["mode"], string> = {
+    work: "Time to focus!",
+    shortBreak: "Short Break",
+    longBreak: "Long Break",
+  };
+
+  const formatTime = `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`; // formats the time, and changes digits if < 10
 
   return (
     <div>
-        <h2>{formatTime}</h2>
+      <h4>{modeNames[mode]}</h4>
+      <h2>{formatTime}</h2>
     </div>
-  )
+  );
 };
 
 export default Timer;
