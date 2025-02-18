@@ -1,7 +1,6 @@
 "use client";
 import Controls from "@/components/Controls";
 import Timer from "@/components/Timer";
-import Image from "next/image";
 import { useState } from "react";
 
 const durations = {
@@ -22,21 +21,10 @@ export default function Home() {
     setIsRunning(false);
   }
 
-  const startTimer = () => {
-
-  }
-
-  const pauseTimer = () => {
-
-  }
-
-  const resetTimer = () => {
-
-  }
-
   return (
     <div className="text-center">
-      <h1 className="font-sans text-4xl font-bold">Pomodoro Timer</h1>
+      <h1 className="font-sans text-4xl font-bold">LockedIn</h1>
+      <h4 className="font-sans text-2xl font-bold">Pomodoro Timer</h4>
       <Timer mode={mode} minutes={Math.floor(time / 60)} seconds={time % 60} />
       <Controls />
     </div>

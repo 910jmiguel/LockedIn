@@ -7,7 +7,7 @@ type TimerProps = {
 const Timer = ({ mode, minutes, seconds }: TimerProps) => {
 
   const modeNames: Record<TimerProps["mode"], string> = {
-    work: "Time to focus!",
+    work: "Time to lock-in!",
     shortBreak: "Short Break",
     longBreak: "Long Break",
   };
