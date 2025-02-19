@@ -7,7 +7,7 @@ type TimerProps = {
 const Timer = ({ mode, minutes, seconds }: TimerProps) => {
 
   const modeNames: Record<TimerProps["mode"], string> = {
-    work: "Time to lock-in!",
+    lockin: "Time to lock-in!",
     shortBreak: "Short Break",
     longBreak: "Long Break",
   };
@@ -17,7 +17,7 @@ const Timer = ({ mode, minutes, seconds }: TimerProps) => {
   return (
     <div>
       <h4>{modeNames[mode]}</h4>
-      <h2>{formatTime}</h2>
+      <h2 className="text-6xl font-semibold">{formatTime}</h2>
     </div>
   );
 };

@@ -1,2 +1,2 @@
-type TimerState = "work" | "shortBreak" | "longBreak";
+type TimerState = "lockin" | "shortBreak" | "longBreak";
 
