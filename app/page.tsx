@@ -34,7 +34,7 @@ export default function Home() {
         }
         return prevTime - 1; // reduce by 1 second
       });
-    }, 1000);
+    }, 1000); // 1000ms = 1s
 
     return () => clearInterval(countdownInterval);
   }, [isRunning]); 
